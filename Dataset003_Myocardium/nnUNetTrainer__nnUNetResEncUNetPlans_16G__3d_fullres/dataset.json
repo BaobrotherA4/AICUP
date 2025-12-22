@@ -7,8 +7,9 @@
     "labels": {
         "background": 0,
         "myocardium": 1,
-        "aortic_valve": 2
+        "aortic_valve": 2,
+        "calcification": 3
     },
-    "numTraining": 90,
+    "numTraining": 50,
     "file_ending": ".nii.gz"
 }

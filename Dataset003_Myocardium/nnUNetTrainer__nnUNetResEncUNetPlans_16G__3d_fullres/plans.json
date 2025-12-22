@@ -3,11 +3,11 @@
     "plans_name": "nnUNetResEncUNetPlans_16G",
     "original_median_spacing_after_transp": [
         0.5,
-        0.38671875,
-        0.38671875
+        0.39453125,
+        0.39453125
     ],
     "original_median_shape_after_transp": [
-        337,
+        146,
         512,
         512
     ],
@@ -36,14 +36,14 @@
                 512.0
             ],
             "spacing": [
-                0.38671875,
-                0.38671875
+                0.39453125,
+                0.39453125
             ],
             "normalization_schemes": [
                 "ZScoreNormalization"
             ],
             "use_mask_for_norm": [
-                false
+                true
             ],
             "resampling_fn_data": "resample_data_or_seg_to_shape",
             "resampling_fn_seg": "resample_data_or_seg_to_shape",
@@ -195,25 +195,25 @@
             "preprocessor_name": "DefaultPreprocessor",
             "batch_size": 2,
             "patch_size": [
-                128,
-                192,
-                192
+                64,
+                256,
+                256
             ],
             "median_image_size_in_voxels": [
-                183,
-                310,
-                310
+                108,
+                392,
+                392
             ],
             "spacing": [
-                0.826423816135876,
-                0.6391871702925913,
-                0.6391871702925913
+                0.6523865919146224,
+                0.5147737951826319,
+                0.5147737951826319
             ],
             "normalization_schemes": [
                 "ZScoreNormalization"
             ],
             "use_mask_for_norm": [
-                false
+                true
             ],
             "resampling_fn_data": "resample_data_or_seg_to_shape",
             "resampling_fn_seg": "resample_data_or_seg_to_shape",
@@ -239,17 +239,23 @@
             "architecture": {
                 "network_class_name": "dynamic_network_architectures.architectures.unet.ResidualEncoderUNet",
                 "arch_kwargs": {
-                    "n_stages": 6,
+                    "n_stages": 7,
                     "features_per_stage": [
                         32,
                         64,
                         128,
                         256,
                         320,
+                        320,
                         320
                     ],
                     "conv_op": "torch.nn.modules.conv.Conv3d",
                     "kernel_sizes": [
+                        [
+                            3,
+                            3,
+                            3
+                        ],
                         [
                             3,
                             3,
@@ -308,7 +314,12 @@
                             2
                         ],
                         [
+                            1,
                             2,
+                            2
+                        ],
+                        [
+                            1,
                             2,
                             2
                         ]
@@ -319,9 +330,11 @@
                         4,
                         6,
                         6,
+                        6,
                         6
                     ],
                     "n_conv_per_stage_decoder": [
+                        1,
                         1,
                         1,
                         1,
@@ -356,25 +369,25 @@
             "preprocessor_name": "DefaultPreprocessor",
             "batch_size": 2,
             "patch_size": [
-                128,
-                192,
-                192
+                64,
+                256,
+                256
             ],
             "median_image_size_in_voxels": [
-                303.0,
+                140.5,
                 512.0,
                 512.0
             ],
             "spacing": [
                 0.5,
-                0.38671875,
-                0.38671875
+                0.39453125,
+                0.39453125
             ],
             "normalization_schemes": [
                 "ZScoreNormalization"
             ],
             "use_mask_for_norm": [
-                false
+                true
             ],
             "resampling_fn_data": "resample_data_or_seg_to_shape",
             "resampling_fn_seg": "resample_data_or_seg_to_shape",
@@ -400,17 +413,23 @@
             "architecture": {
                 "network_class_name": "dynamic_network_architectures.architectures.unet.ResidualEncoderUNet",
                 "arch_kwargs": {
-                    "n_stages": 6,
+                    "n_stages": 7,
                     "features_per_stage": [
                         32,
                         64,
                         128,
                         256,
                         320,
+                        320,
                         320
                     ],
                     "conv_op": "torch.nn.modules.conv.Conv3d",
                     "kernel_sizes": [
+                        [
+                            3,
+                            3,
+                            3
+                        ],
                         [
                             3,
                             3,
@@ -469,7 +488,12 @@
                             2
                         ],
                         [
+                            1,
                             2,
+                            2
+                        ],
+                        [
+                            1,
                             2,
                             2
                         ]
@@ -480,9 +504,11 @@
                         4,
                         6,
                         6,
+                        6,
                         6
                     ],
                     "n_conv_per_stage_decoder": [
+                        1,
                         1,
                         1,
                         1,
@@ -520,13 +546,13 @@
     "label_manager": "LabelManager",
     "foreground_intensity_properties_per_channel": {
         "0": {
-            "max": 1819.0,
-            "mean": 134.01280212402344,
-            "median": 112.0,
-            "min": -882.0,
-            "percentile_00_5": -27.0,
-            "percentile_99_5": 481.0,
-            "std": 90.67718505859375
+            "max": 1170.0,
+            "mean": 131.08058166503906,
+            "median": 113.0,
+            "min": -867.0,
+            "percentile_00_5": -12.0,
+            "percentile_99_5": 441.0,
+            "std": 81.0052719116211
         }
     }
 }
