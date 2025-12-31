@@ -48,5 +48,11 @@ nnUNet_raw/
 | **4. 模型推論** | `nnUNetv2_predict` | **測試集影像 (.nii.gz)**<br>`imagesTs/`<br>**模型權重 (.pth)** | **預測結果 (.nii.gz)**<br>指定之輸出資料夾 | 使用滑動視窗 (Sliding Window) 進行預測。若結果有拼接痕跡，需檢查 Gaussian Overlap 參數。 |
 | **5. 後處理 (選用)** | `post_processing.py` | **預測結果 (.nii.gz)** | **最終提交檔案**<br>(符合競賽規範格式) | 執行最大連通域保留 (Keep Largest Component) 以去除細微雜訊，並轉換檔名以符合繳交規範。 |
 
+快速驗證步驟 (Quick Start)
+確認環境配置無誤後，您可以用以下順序執行整個流程：
+前處理：nnUNetv2_plan_and_preprocess -d 501 -c 3d_fullres
+訓練：nnUNetv2_train 501 3d_fullres 0 (訓練 Fold 0)
+預測：nnUNetv2_predict -i nnUNet_raw/Dataset501_Heart/imagesTs -o output -d 501 -c 3d_fullres -f 0
+
 
     
