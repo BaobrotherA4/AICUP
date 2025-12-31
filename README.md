@@ -52,9 +52,11 @@ nnUNet_raw/
 
 快速驗證步驟 (Quick Start)
 確認環境配置無誤後，您可以用以下順序執行整個流程：
+```text
 前處理：nnUNetv2_plan_and_preprocess -d 501 -c 3d_fullres
 訓練：nnUNetv2_train 501 3d_fullres 0 (訓練 Fold 0)
 預測：nnUNetv2_predict -i nnUNet_raw/Dataset501_Heart/imagesTs -o output -d 501 -c 3d_fullres -f 0
+```
 
 
     
