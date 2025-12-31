@@ -30,12 +30,14 @@ export nnUNet_preprocessed="/您的專案路徑/nnUNet_preprocessed"
 export nnUNet_results="/您的專案路徑/nnUNet_results"
 ```
 ### 4. 必備資料結構
+```text
 nnUNet_raw/
 ├── Dataset501_Heart/
     ├── dataset.json          # 定義標籤對應 (Background: 0, Muscle: 1)
     ├── imagesTr/             # 訓練集影像 (格式：.nii.gz, 檔名需含 _0000)
     ├── labelsTr/             # 訓練集標註 (格式：.nii.gz)
     └── imagesTs/             # 測試集影像 (格式：.nii.gz)
+```
 ## ⚙️ 重要模塊輸出/輸入 (Important Modules I/O)
 
 下表詳列本專案各階段核心程式的資料流向，若執行過程中發生錯誤，請優先檢查該步驟的「輸入路徑」檔案是否存在且格式正確。
