@@ -57,6 +57,7 @@ nnUNet_raw/
 訓練：nnUNetv2_train 501 3d_fullres 0 (訓練 Fold 0)
 預測：nnUNetv2_predict -i nnUNet_raw/Dataset501_Heart/imagesTs -o output -d 501 -c 3d_fullres -f 0
 ```
+1111
 
 
     
